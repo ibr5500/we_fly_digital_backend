@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+    render json: { user: @users }
+  end
+
   def create
     if User.find_by_email(user_params[:email])
       render json: { error: 'Email exits, try a diffrent one' }, status: :not_acceptable
