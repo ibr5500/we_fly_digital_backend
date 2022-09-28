@@ -10,40 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_24_131231) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_24_125847) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "airlines", force: :cascade do |t|
     t.string "name"
-    t.string "logo"
-    t.integer "num_of_seats"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "airlines_airports", id: false, force: :cascade do |t|
-    t.bigint "airline_id", null: false
-    t.bigint "airport_id", null: false
-    t.index ["airline_id", "airport_id"], name: "index_airlines_airports_on_airline_id_and_airport_id"
-    t.index ["airport_id", "airline_id"], name: "index_airlines_airports_on_airport_id_and_airline_id"
-  end
-
-  create_table "airports", force: :cascade do |t|
-    t.string "name"
-    t.string "country"
-    t.string "city"
+    t.string "image"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.integer "num_of_seats"
-    t.string "city_name"
+    t.string "city"
     t.date "date"
     t.bigint "users_id", null: false
+    t.bigint "airlines_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["airlines_id"], name: "index_reservations_on_airlines_id"
     t.index ["users_id"], name: "index_reservations_on_users_id"
   end
 
@@ -56,5 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_24_131231) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "reservations", "airlines", column: "airlines_id"
   add_foreign_key "reservations", "users", column: "users_id"
 end
