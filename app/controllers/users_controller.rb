@@ -5,10 +5,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    if User.find_by_email(user_params[:email])
-      render json: { error: 'Email exits, try a diffrent one' }, status: :not_acceptable
+    if User.find_by(username: params[:username].to_s.downcase)
+      render json: { error: 'Username exits, try a diffrent one' }, status: :not_acceptable
     else
       @user = User.create(user_params)
+      @user.username = @user.username.downcase
 
       if @user.valid?
         token = encode_token({ user_id: @user.id })
