@@ -1,15 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  num_of_seats: 1
-  category: MyString
-  users: one
-  airports: one
-  airlines: one
+  city: MyString
+  date: 2022-09-29 12:01:14
+  user: one
+  airline: one
 
 two:
-  num_of_seats: 1
-  category: MyString
-  users: two
-  airports: two
-  airlines: two
+  city: MyString
+  date: 2022-09-29 12:01:14
+  user: two
+  airline: two
