@@ -17,6 +17,6 @@ class ReservationsController < ApplicationController
     end
 
   def reservation_params
-    params.require(:reservation).permit(:date, :city_name)
+    params.require(:reservation).permit(:date, :city, :airline_id)
   end 
 end
