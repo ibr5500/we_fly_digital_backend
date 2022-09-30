@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    if User.find_by(username: params[:username].to_s.downcase)
+    if User.find_by(username: user_params[:username].to_s.downcase)
       render json: { error: 'Username exits, try a diffrent one' }, status: :not_acceptable
     else
       @user = User.create(user_params)
