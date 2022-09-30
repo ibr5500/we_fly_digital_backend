@@ -1,12 +1,12 @@
 class ReservationsController < ApplicationController
+  before_action :authorize
   def index
-    @reservations = Reservation.all
+    @reservations = @user.reservations.all
     render json: { reservations: @reservations }
   end
 
   def create
-      @user = User.find(params[:user_id])
-      @reservation = Reservation.create(reservation_params)
+      @reservation = Reservation.create(reservation_params.merge(user: @user))
 
       if @reservation.valid?
         token = encode_token({ reservation_id: @reservation.id })
