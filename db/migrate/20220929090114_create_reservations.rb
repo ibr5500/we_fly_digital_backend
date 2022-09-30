@@ -2,7 +2,7 @@ class CreateReservations < ActiveRecord::Migration[7.0]
   def change
     create_table :reservations do |t|
       t.string :city
-      t.datetime :date
+      t.date :date
       t.references :user, null: false, foreign_key: true
       t.references :airline, null: false, foreign_key: true
 

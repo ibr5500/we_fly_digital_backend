@@ -50,3 +50,5 @@ end
 
 # Jwt Gem
 gem 'jwt'
+
+gem 'hirb'
