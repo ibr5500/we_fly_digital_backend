@@ -9,7 +9,7 @@ class Api::V1::AirlinesController < ApplicationController
   def show
     @airline = Airline.find_by(id: params[:id])
     render json: {
-      data: @airline, airport: @airline.airports
+      data: @airline
     }
   end
 end
