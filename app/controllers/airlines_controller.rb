@@ -35,6 +35,6 @@ class AirlinesController < ApplicationController
   private
 
   def airline_params
-    params.require(:airline).permit(:name, :image, :price, :user_id)
+    params.require(:airline).permit(:name, :image, :price)
   end
 end
