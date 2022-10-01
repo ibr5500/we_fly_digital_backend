@@ -14,18 +14,21 @@ class AirlinesController < ApplicationController
     }
   end
 
-  def create @airline = Airline.new(airline_params.merge(user: @user)) 
-    if @airline.save render json: { message: 'Airline Created Sucessfully' }, status: :ok else render json: { error: 'Invalid data, Couldn\'t created an Airline' }, status: :unprocessable_entity end end 
+  def create
+    @airline = Airline.new(airline_params.merge(user: @user))
+    if @airline.save
+      render json: { message: 'Airline Created Sucessfully' }, status: :ok
+    else
+      render json: { error: 'Invalid data, Couldn\'t created an Airline' }, status: :unprocessable_entity
+    end
+  end
 
   def destroy
-    @airline = Airline.find(id: params[:id])
-
-    if @airline.nil?
-      render json: { status: { code: 404, message: 'Airline could not found' } }
-      nil
-    else
-      @airline.destroy
+    @airline = Airline.find_by(id: params[:id])
+    if @airline.destroy
       render json: { status: { code: 200, message: 'Airline has been deleted sucessfully' } }
+    else 
+      render json: { status: { code: 404, message: 'Airline could not found' } }      
     end
   end
 
