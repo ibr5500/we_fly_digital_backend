@@ -4,8 +4,6 @@ class ApplicationController < ActionController::API
   end
 
   def decode_token
-    # Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiMTIifQ.AYoDvVWjqV8pcJTqtd4ypw5h9FeFjnFvB3mStsn-LpY
-
     auth_header = request.headers['Authorization']
 
     if auth_header # rubocop:todo Style/GuardClause
