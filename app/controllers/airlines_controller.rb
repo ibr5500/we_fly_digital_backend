@@ -14,16 +14,8 @@ class AirlinesController < ApplicationController
     }
   end
 
-  def create
-    @airline = Airline.new(airline_params.merge(user: @user))
-
-    if @airline.save
-      token = encode_token({ airline_id: @airline.id })
-      render json: { user: @user.fullname, airline: @airline, token: }, status: :ok
-    else
-      render json: { error: 'Invalid date or city' }, status: :unprocessable_entity
-    end
-  end
+  def create @airline = Airline.new(airline_params.merge(user: @user)) 
+    if @airline.save render json: { message: 'Airline Created Sucessfully' }, status: :ok else render json: { error: 'Invalid data, Couldn\'t created an Airline' }, status: :unprocessable_entity end end 
 
   def destroy
     @airline = Airline.find(id: params[:id])
