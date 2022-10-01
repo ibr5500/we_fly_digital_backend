@@ -27,8 +27,8 @@ class AirlinesController < ApplicationController
     @airline = Airline.find_by(id: params[:id])
     if @airline.destroy
       render json: { status: { code: 200, message: 'Airline has been deleted sucessfully' } }
-    else 
-      render json: { status: { code: 404, message: 'Airline could not found' } }      
+    else
+      render json: { status: { code: 404, message: 'Airline could not found' } }
     end
   end
 
