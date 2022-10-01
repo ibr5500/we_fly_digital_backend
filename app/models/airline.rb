@@ -1,4 +1,5 @@
 class Airline < ApplicationRecord
+  belongs_to :user, foreign_key: 'user_id'
   has_many :reservations, dependent: :destroy
 
   validates :name, :image, presence: true
