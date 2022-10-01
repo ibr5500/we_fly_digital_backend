@@ -1,7 +1,7 @@
 class AirlinesController < ApplicationController
   before_action :authorize
   def index
-    @airlines = @user.airlines.all
+    @airlines = Airline.all
     render json: {
       data: @airlines
     }
@@ -15,16 +15,13 @@ class AirlinesController < ApplicationController
   end
 
   def create
-    @airline = Airlines.new(airline_params.merge(user: @user))
+    @airline = Airline.new(airline_params.merge(user: @user))
+
     if @airline.save
-      render json: {
-        status: { code: 200, message: 'Airline created sucessfully.' },
-        data: @airline
-      }
+      token = encode_token({ airline_id: @airline.id })
+      render json: { user: @user.fullname, airline: @airline, token: }, status: :ok
     else
-      render json: {
-        status: { code: 404, message: 'Airline Could not created !!' }
-      }
+      render json: { error: 'Invalid date or city' }, status: :unprocessable_entity
     end
   end
 
