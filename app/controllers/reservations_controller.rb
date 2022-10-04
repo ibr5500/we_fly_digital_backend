@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
     @reservations = @user.reservations
     @result = []
     @reservations.each do |res|
-      @result << { reservation: res, airline: Airline.find(res.airline_id) }
+      @result << { reservation: res, airline: Airline.includes(:user).find(res.airline_id) }
     end
     render json: { reservations: @result }
   end

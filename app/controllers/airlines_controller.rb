@@ -1,14 +1,14 @@
 class AirlinesController < ApplicationController
   before_action :authorize
   def index
-    @airlines = Airline.all
+    @airlines = Airline.includes(:user).all
     render json: {
       data: @airlines
     }
   end
 
   def show
-    @airline = Airline.find_by(id: params[:id])
+    @airline = Airline.includes(:user).find_by(id: params[:id])
     render json: {
       data: @airline
     }
@@ -24,7 +24,7 @@ class AirlinesController < ApplicationController
   end
 
   def destroy
-    @airline = Airline.find_by(id: params[:id])
+    @airline = Airline.includes(:user).find_by(id: params[:id])
     if @airline.destroy
       render json: { status: { code: 200, message: 'Airline has been deleted sucessfully' } }
     else
