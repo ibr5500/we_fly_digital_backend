@@ -28,7 +28,7 @@ class AirlinesController < ApplicationController
     if @airline.destroy
       render json: {
         message: 'Airline has been deleted Sucessfully',
-        data: Airline.all
+        data: Airline.includes(:user).all
       }
     else
       render json: { status: { code: 404, message: 'Airline could not found' } }
