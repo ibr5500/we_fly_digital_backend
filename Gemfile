@@ -12,7 +12,7 @@ gem 'rubocop'
 gem 'rubocop-rails'
 
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'factory_bot'
   gem 'database_cleaner'
   gem 'pry-rails'
   gem 'guard-rspec'

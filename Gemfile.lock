@@ -102,11 +102,6 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
@@ -164,6 +159,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8)
       mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -295,8 +292,8 @@ DEPENDENCIES
   bootsnap
   database_cleaner
   debug
+  factory_bot
   factory_bot_rails
-  factory_girl_rails
   faker
   guard-rspec
   hirb
