@@ -45,17 +45,4 @@ RSpec.describe 'Reservations', type: :request do
       expect(response).to have_http_status(:ok)
     end
   end
-
-  describe 'PUT /reservations/:id' do
-    it 'updates a reservation' do
-      put '/reservations/1', params: {
-        reservation: {
-          user_id: @user.id,
-          airline_id: @hairline.id,
-          date: '2022-10-04'
-        }
-      }, headers: { Authorization: @authorization }
-      expect(response).to have_http_status(:ok)
-    end
-  end
 end

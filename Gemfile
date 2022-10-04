@@ -11,6 +11,17 @@ gem 'rack-cors'
 gem 'rubocop'
 gem 'rubocop-rails'
 
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'pry-rails'
+  gem 'guard-rspec'
+  gem 'poltergeist'
+  gem 'zeus', require: false
+  gem 'shoulda'
+  gem 'faker'
+end
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
