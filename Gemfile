@@ -8,6 +8,9 @@ gem 'rails', '~> 7.0.4'
 
 gem 'rack-cors'
 
+gem 'rubocop'
+gem 'rubocop-rails'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 

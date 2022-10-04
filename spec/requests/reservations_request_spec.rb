@@ -23,9 +23,9 @@ RSpec.describe 'Reservations', type: :request do
     it 'returns an error if the user is not logged in' do
       post '/reservations', params: {
         reservation: {
-            user_id: @user.id,
-            airline_id: @hairline.id,
-            date: '2022-10-04'
+          user_id: @user.id,
+          airline_id: @hairline.id,
+          date: '2022-10-04'
         }
       }
       expect(response).to have_http_status(:unauthorized)
@@ -50,9 +50,9 @@ RSpec.describe 'Reservations', type: :request do
     it 'updates a reservation' do
       put '/reservations/1', params: {
         reservation: {
-            user_id: @user.id,
-            airline_id: @hairline.id,
-            date: '2022-10-04'
+          user_id: @user.id,
+          airline_id: @hairline.id,
+          date: '2022-10-04'
         }
       }, headers: { Authorization: @authorization }
       expect(response).to have_http_status(:ok)
