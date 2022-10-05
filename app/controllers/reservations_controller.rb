@@ -1,8 +1,12 @@
 class ReservationsController < ApplicationController
   before_action :authorize
   def index
-    @reservations = @user.reservations.all
-    render json: { reservations: @reservations }
+    @reservations = @user.reservations
+    @result = []
+    @reservations.each do |res|
+      @result << { reservation: res, airline: Airline.find(res.airline_id) }
+    end
+    render json: { reservations: @result }
   end
 
   def create

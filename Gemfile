@@ -17,8 +17,6 @@ gem 'rspec-rails'
 require 'database_cleaner'
 
 require 'capybara/rspec'
-
-
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
