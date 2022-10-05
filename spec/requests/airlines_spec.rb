@@ -1,10 +1,24 @@
 require 'swagger_helper'
 
-RSpec.describe 'users', type: :request do
+RSpec.describe 'airlines', type: :request do
 
-  path '/' do
+  path '/airlines' do
 
-    get('list users') do
+    get('list airlines') do
+      response(200, 'successful') do
+
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
+
+    post('create airline') do
       response(200, 'successful') do
 
         after do |example|
@@ -19,10 +33,13 @@ RSpec.describe 'users', type: :request do
     end
   end
 
-  path '/users' do
+  path '/airlines/{id}' do
+    # You'll want to customize the parameter types...
+    parameter name: 'id', in: :path, type: :string, description: 'id'
 
-    get('list users') do
+    get('show airline') do
       response(200, 'successful') do
+        let(:id) { '123' }
 
         after do |example|
           example.metadata[:response][:content] = {
@@ -35,40 +52,10 @@ RSpec.describe 'users', type: :request do
       end
     end
 
-    post('create user') do
+    delete('delete airline') do
       response(200, 'successful') do
-        consumes 'appication/json'
-        parameter name: :user, in: :body, schema: {
-          type: :object,
-          properties: { fullname: { type: :string }, username: { type: :string }, email: { type: :string }, password: { type: :string } },
-          required: %w[fullname username email password]
-        }
+        let(:id) { '123' }
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
-      run_test!
-      end
-    end
-  end
-
-  path '/login' do
-
-    post('login user') do
-      response(200, 'successful') do
-        consumes 'application/json'
-        parameter name: :user, in: :body, schema: {
-          type: :object,
-          properties: {
-            username: { type: :string },
-            password: { type: :string }
-          },
-          required: %w[username password]
-        }
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

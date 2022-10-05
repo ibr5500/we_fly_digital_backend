@@ -4,6 +4,46 @@ info:
   title: API V1
   version: v1
 paths:
+  "/airlines":
+    get:
+      summary: list airlines
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create airline
+      responses:
+        '200':
+          description: successful
+  "/airlines/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show airline
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete airline
+      responses:
+        '200':
+          description: successful
+  "/reservations":
+    get:
+      summary: list reservations
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create reservation
+      responses:
+        '200':
+          description: successful
   "/":
     get:
       summary: list users
@@ -18,15 +58,49 @@ paths:
           description: successful
     post:
       summary: create user
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          appication/json:
+            schema:
+              type: object
+              properties:
+                fullname:
+                  type: string
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+              required:
+              - fullname
+              - username
+              - email
+              - password
   "/login":
     post:
       summary: login user
+      parameters: []
       responses:
         '200':
           description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+              required:
+              - username
+              - password
 servers:
 - url: http://{defaultHost}
   variables:
