@@ -10,8 +10,8 @@ Check out the [API documentation](https://flight-digital.herokuapp.com/api-docs/
 
 ## Project Documentation 📄
 
-- [x] Here is the deployed of back end [Heroku]()👈
-- [x] Here is the deployed of front end [Netlify]()👈
+- [x] Here is the deployed of back end [Heroku](https://flight-digital.herokuapp.com/)👈
+- [x] Here is the deployed of front end [Heroku](https://we-fly-digital.herokuapp.com/)👈
 
 ## Kanban board 
 
@@ -24,7 +24,7 @@ Check out the [API documentation](https://flight-digital.herokuapp.com/api-docs/
 
 ### Front-End Repo 
 
-- [x] [We Fly Digital]()
+- [x] [We Fly Digital](https://github.com/ibr5500/flight_reservation-frontend)
 
 ## Built With 🛠️
 
@@ -129,7 +129,7 @@ $ rspec ./spec/#{filename}_spec.rb
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/ibr5500/flight_reservation-backend/issues).
 
 ## Show your support
 
