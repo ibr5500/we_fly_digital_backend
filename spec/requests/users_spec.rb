@@ -1,7 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'users', type: :request do
-  path '/' do
+  path root_path do
     get('list users') do
       response(200, 'successful') do
         after do |example|
@@ -16,7 +16,7 @@ RSpec.describe 'users', type: :request do
     end
   end
 
-  path '/users' do
+  path users_path do
     get('list users') do
       response(200, 'successful') do
         after do |example|
@@ -52,7 +52,7 @@ RSpec.describe 'users', type: :request do
     end
   end
 
-  path '/login' do
+  path login_path do
     post('login user') do
       response(200, 'successful') do
         consumes 'application/json'
