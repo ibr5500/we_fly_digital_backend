@@ -27,9 +27,9 @@ RSpec.describe 'Airlines', type: :request do
     before(:example) do
       post '/airlines', params: {
         airline: {
-            name: 'Kanombe',
-            image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1435027890l/37298.jpg',
-            price: '1000$'
+          name: 'Kanombe',
+          image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1435027890l/37298.jpg',
+          price: '1000$'
         }
       }
     end

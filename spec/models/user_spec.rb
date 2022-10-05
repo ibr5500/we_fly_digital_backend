@@ -12,9 +12,9 @@ RSpec.describe User, type: :model do
     end
 
     it 'that a user has a valid username' do
-        subject.username = 'olivier'
-        expect(subject).to be_valid
-      end
+      subject.username = 'olivier'
+      expect(subject).to be_valid
+    end
 
     it 'that a user has a valid email' do
       subject.email = 'oliviergas@gmail.com'
@@ -32,8 +32,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'that a user has a valid updated_at' do
-        subject.updated_at = '2022-10-19'
-        expect(subject).to be_valid
-      end
+      subject.updated_at = '2022-10-19'
+      expect(subject).to be_valid
+    end
   end
 end

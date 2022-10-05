@@ -12,14 +12,14 @@ gem 'rubocop'
 gem 'rubocop-rails'
 
 group :development, :test do
-  gem 'factory_bot'
   gem 'database_cleaner'
-  gem 'pry-rails'
+  gem 'factory_bot'
+  gem 'faker'
   gem 'guard-rspec'
   gem 'poltergeist'
-  gem 'zeus', require: false
+  gem 'pry-rails'
   gem 'shoulda'
-  gem 'faker'
+  gem 'zeus', require: false
 end
 
 # Use postgresql as the database for Active Record
