@@ -8,6 +8,12 @@ gem 'rails', '~> 7.0.4'
 
 gem 'rack-cors'
 
+# Use Swagger to generate API docmentations [https://github.com/rswag/rswag]
+gem 'rswag'
+
+# Use RSpec for testing
+gem 'rspec-rails'
+
 require 'database_cleaner'
 
 require 'capybara/rspec'
