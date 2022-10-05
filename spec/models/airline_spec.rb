@@ -16,10 +16,10 @@ RSpec.describe Airline, type: :model do
       subject.name = 'amsterdam'
       expect(subject).to_not be_valid
     end
-    
+
     it 'An Airline should have a valid user_id' do
-        subject.user_id = '2'
-        expect(subject).to_not be_valid
+      subject.user_id = '2'
+      expect(subject).to_not be_valid
     end
   end
 end
