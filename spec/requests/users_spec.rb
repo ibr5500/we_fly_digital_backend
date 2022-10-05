@@ -16,6 +16,7 @@ RSpec.describe 'users', type: :request do
     end
   end
 
+  # rubocop:disable Metrics/BlockLength
   path users_path do
     get('list users') do
       response(200, 'successful') do
@@ -51,6 +52,7 @@ RSpec.describe 'users', type: :request do
       end
     end
   end
+  # rubocop:enable Metrics/BlockLength
 
   path login_path do
     post('login user') do
