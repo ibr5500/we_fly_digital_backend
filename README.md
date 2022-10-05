@@ -1,11 +1,8 @@
-# README
-
-
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Flight reservations
+# We Fly Digital
 
-> This application is based booking a reservation at any airline around the world, you need just to login then book a reservation, after that you can log out or check all your reservations.
+> We Fly Digital is a responsive app that lists flight reservations. A user can selects a specific airline, see the details page with its full description, and can click the "Reserve" button to reserve it. The user can also access the "Reserve" page from the navigation panel, add or delete a reservation or airline.
 
 
 ## API Documentation
@@ -16,21 +13,18 @@ Check out the [API documentation]()
 - [x] Here is the deployed of back end [Heroku]()👈
 - [x] Here is the deployed of front end [Netlify]()👈
 
-#### ERD diagram
+## Kanban board 
 
-![image](![Screenshot from 2022-10-05 10-32-43](https://user-images.githubusercontent.com/86069740/194005586-9b6bced6-eca9-41ec-b2f4-7ece0cd23615.png)
-)
+- [x] [Link to the initial state of our Kanban board](https://user-images.githubusercontent.com/86069740/194050526-743a478f-d217-40b3-ae1d-11708bd5e355.png)
+- [x] [Link to the final state of our Kanban board](https://github.com/users/ibr5500/projects/6)
 
+### ERD diagram
 
-### Views 
+![Screenshot from 2022-10-05 10-32-43](https://user-images.githubusercontent.com/86069740/194005586-9b6bced6-eca9-41ec-b2f4-7ece0cd23615.png)
 
-#### Front_end 
+### Front-End Repo 
 
-![all-devices-black (7)](https://user-images.githubusercontent.com/95297251/193011566-ec2ffa84-7b1e-458f-8c46-8cf7eba574df.png)
-
-#### Back_end
-
-![all-devices-white (3)](https://user-images.githubusercontent.com/95297251/193010139-c3abd6dd-6ee5-4ddd-b9b7-16395d5a0c0f.png)
+- [x] [We Fly Digital]()
 
 ## Built With 🛠️
 
