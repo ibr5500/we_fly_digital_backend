@@ -1,12 +1,9 @@
 require 'swagger_helper'
 
 RSpec.describe 'users', type: :request do
-
   path '/' do
-
     get('list users') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -20,10 +17,8 @@ RSpec.describe 'users', type: :request do
   end
 
   path '/users' do
-
     get('list users') do
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {
@@ -40,7 +35,8 @@ RSpec.describe 'users', type: :request do
         consumes 'appication/json'
         parameter name: :user, in: :body, schema: {
           type: :object,
-          properties: { fullname: { type: :string }, username: { type: :string }, email: { type: :string }, password: { type: :string } },
+          properties: { fullname: { type: :string }, username: { type: :string }, email: { type: :string },
+                        password: { type: :string } },
           required: %w[fullname username email password]
         }
 
@@ -51,13 +47,12 @@ RSpec.describe 'users', type: :request do
             }
           }
         end
-      run_test!
+        run_test!
       end
     end
   end
 
   path '/login' do
-
     post('login user') do
       response(200, 'successful') do
         consumes 'application/json'
