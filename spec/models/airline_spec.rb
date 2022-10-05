@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Airline, type: :model do
   subject do
     airline = Airline.new(
-      name: 'Kanombe'
+      name: 'Rwandair'
     )
 
     return airline
