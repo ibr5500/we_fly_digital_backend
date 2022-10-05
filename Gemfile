@@ -8,19 +8,10 @@ gem 'rails', '~> 7.0.4'
 
 gem 'rack-cors'
 
-gem 'rubocop'
-gem 'rubocop-rails'
+require 'database_cleaner'
 
-group :development, :test do
-  gem 'database_cleaner'
-  gem 'factory_bot'
-  gem 'faker'
-  gem 'guard-rspec'
-  gem 'poltergeist'
-  gem 'pry-rails'
-  gem 'shoulda'
-  gem 'zeus', require: false
-end
+require 'capybara/rspec'
+
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
