@@ -79,11 +79,6 @@ GEM
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
     erubi (1.11.0)
-    factory_bot (6.2.1)
-      activesupport (>= 5.0.0)
-    factory_bot_rails (6.2.0)
-      factory_bot (~> 6.2.0)
-      railties (>= 5.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hirb (0.7.3)
@@ -103,7 +98,6 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
     minitest (5.16.3)
     msgpack (1.6.0)
     net-imap (0.3.1)
@@ -115,8 +109,9 @@ GEM
     net-smtp (0.3.2)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.13.8-x64-mingw-ucrt)
+      racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.3)
     pg (1.4.3-x64-mingw-ucrt)
@@ -207,7 +202,6 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   debug
-  factory_bot_rails
   hirb
   jwt
   pg (~> 1.1)
@@ -219,7 +213,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.0.4p208
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.3.22
