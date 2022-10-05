@@ -6,7 +6,7 @@
 
 
 ## API Documentation
-Check out the [API documentation]()
+Check out the [API documentation](https://flight-digital.herokuapp.com/api-docs/index.html)
 
 ## Project Documentation 📄
 

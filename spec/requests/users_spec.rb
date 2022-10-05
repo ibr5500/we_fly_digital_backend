@@ -1,7 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'users', type: :request do
-  path root_path do
+  path '/' do
     get('list users') do
       response(200, 'successful') do
         after do |example|
@@ -17,7 +17,7 @@ RSpec.describe 'users', type: :request do
   end
 
   # rubocop:disable Metrics/BlockLength
-  path users_path do
+  path '/users' do
     get('list users') do
       response(200, 'successful') do
         after do |example|
@@ -54,7 +54,7 @@ RSpec.describe 'users', type: :request do
   end
   # rubocop:enable Metrics/BlockLength
 
-  path login_path do
+  path '/login' do
     post('login user') do
       response(200, 'successful') do
         consumes 'application/json'
