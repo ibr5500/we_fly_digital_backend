@@ -5,5 +5,5 @@ class User < ApplicationRecord
   has_many :airlines, foreign_key: 'airline_id', dependent: :destroy
 
   validates :password, presence: true
-  validates :fullname, :email, :username, uniqueness: true, presence: true 
+  validates :fullname, :email, :username, uniqueness: true, presence: true
 end
