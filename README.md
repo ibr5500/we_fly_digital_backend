@@ -65,18 +65,14 @@ Clone the repository using the GitHub link provided below.
 
 To get a local copy up and running follow these simple example steps.
 
-- clone the repository by running: git@github.com:ibr5500/flight_reservation-backend.git
-
-- setup rails app
-``` rails . my_api --api --database=postgresql```
-- navigate to the folder
-  ``` cd <DIRECTORY> ```
+- clone the repository by running:
+```
+git clone git@github.com:ibr5500/flight_reservation-backend.git
+```
 - Install packages
-  ``` npm i ```
+  ``` bundle i ```
 - Run the app
 ```sh
-# Load the schema
-rails db:schema:load
 # Create the database
 rake db:create
 # Run database Migration
@@ -96,7 +92,7 @@ $ gem install rspec
 
 To run tests, please run this command
 ```
-$ rspec ./spec/#{filename}_spec.rb
+$ rspec spec
 ```
 
 ## Authors
