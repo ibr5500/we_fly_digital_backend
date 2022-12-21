@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
-  database: flight_reservation_backend_production
-  username: flight_reservation_backend
-  password: <%= ENV["FLIGHT_RESERVATION_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: flight_reservationdb
+  username: flight_reservationdb_user
+  password: <%= ENV["FLIGHT_RESERVATIONDB_DATABASE_PASSWORD"] %>
