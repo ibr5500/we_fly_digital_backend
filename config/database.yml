@@ -85,6 +85,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: flight_reservationdb
-  username: flight_reservationdb_user
-  password: <%= ENV["FLIGHT_RESERVATIONDB_DATABASE_PASSWORD"] %>
+  database: we_fly_digital_db
+  username: we_fly_digital_db_user
+  password: <%= ENV["WE_FLY_DIGITAL_DB_DATABASE_PASSWORD"] %>
