@@ -100,8 +100,8 @@ $ rspec spec
 👤 **Nati G/gorgis** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [@NatiG25](https://github.com/NatiG25)
-- Twitter: [@NatiG87702270](https://twitter.com/NatiG87702270)
-- LinkedIn: [@Natnail](https://www.linkedin.com/in/natnailgorgis/ )
+- Twitter: [@NatiG87702270](https://twitter.com/NatiG255)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/natigorgis/)
 
 👤 **Ibrahim Ahmat**
 
