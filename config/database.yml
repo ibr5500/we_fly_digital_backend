@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: flight_reservation_backend_development
+  database: we_fly_digital_backend_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,7 +58,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: flight_reservation_backend_test
+  database: we_fly_digital_backend_test
   # username: postgres # change to your own username
   # password: 12345 # change to your own password
 
@@ -85,6 +85,3 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: we_fly_digital_db
-  username: we_fly_digital_db_user
-  password: <%= ENV["WE_FLY_DIGITAL_DB_DATABASE_PASSWORD"] %>
