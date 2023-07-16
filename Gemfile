@@ -9,7 +9,7 @@ gem 'rails', '~> 7.0.4'
 gem 'rack-cors'
 
 # Use Swagger to generate API docmentations [https://github.com/rswag/rswag]
-gem 'rswag'
+gem 'rswag', '>= 2.10.1'
 
 gem 'rspec-rails'
 
