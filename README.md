@@ -2,7 +2,7 @@
 
 # We Fly Digital
 
-> We Fly Digital is a responsive app that lists flight reservations. A user can selects a specific airline, see the details page with its full description, and can click the "Reserve" button to reserve it. The user can also access the "Reserve" page from the navigation panel, add or delete a reservation or airline.
+> Our robust Rails API serves as the backbone of the 'We Fly Digital' project, seamlessly connecting users to a world of digital exploration. Whether it's booking flights, making reservations, or create & delete airlines, our Rails API ensures a smooth and responsive experience, enabling users to soar through the digital skies.
 
 
 ## API Documentation
