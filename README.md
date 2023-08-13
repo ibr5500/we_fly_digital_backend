@@ -11,7 +11,7 @@ Check out the [API documentation](https://flight-digital.herokuapp.com/api-docs/
 ## Project Documentation 📄
 
 - [x] Here is the deployed of back end [Render](https://weflydigitalapi.onrender.com)👈
-- [x] Here is the deployed of front end [Netlify](https://we-fly-digital.netlify.app)👈
+- [x] Here is the deployed of front end [Netlify](https://weflydigital.netlify.app/)👈
 
 ## Kanban board 
 
